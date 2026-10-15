@@ -160,15 +160,15 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Население, чел.</th>\
-                        <td>' + (feature.properties['pop_2025'] !== null ? autolinker.link(String(feature.properties['pop_2025']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['pop_display'] !== null ? autolinker.link(String(feature.properties['pop_display']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Площадь, км²</th>\
-                        <td>' + (feature.properties['area_km2'] !== null ? autolinker.link(String(feature.properties['area_km2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['area_display'] !== null ? autolinker.link(String(feature.properties['area_display']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Плотность, чел./км²</th>\
-                        <td>' + (feature.properties['density'] !== null ? autolinker.link(String(feature.properties['density']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['density_display'] !== null ? autolinker.link(String(feature.properties['density_display']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -179,7 +179,7 @@
         }
 
         function style_2025_0_0(feature) {
-            if (feature.properties['density'] >= 2.057681 && feature.properties['density'] <= 4.398457 ) {
+            if (feature.properties['density'] >= 2.050000 && feature.properties['density'] <= 4.398457 ) {
                 return {
                 pane: 'pane_2025_0',
                 opacity: 1,
@@ -269,7 +269,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['density'] >= 659.297614 && feature.properties['density'] <= 2704.091898 ) {
+            if (feature.properties['density'] >= 659.297614 && feature.properties['density'] <= 2704.100000 ) {
                 return {
                 pane: 'pane_2025_0',
                 opacity: 1,
